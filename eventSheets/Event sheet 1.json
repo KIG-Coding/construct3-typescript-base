@@ -1,0 +1,95 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 915082374553602,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "send-message",
+					"objectClass": "Multiplayer",
+					"sid": 203273848738937,
+					"parameters": {
+						"peer-id": "\"\"",
+						"tag": "\"tag\"",
+						"message": "\"message\"",
+						"mode": "reliable-ordered"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "hostIndicator",
+					"sid": 617913229358543,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 980770627631693,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "hostIndicator",
+					"sid": 973247752394952,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				}
+			],
+			"sid": 750407532379390,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-peer-message",
+					"objectClass": "Multiplayer",
+					"sid": 407960310931140
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "ground",
+					"sid": 908280670201974,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 744230848674280,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ground",
+					"sid": 949154249802940,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 297606945088615
+		}
+	],
+	"sid": 237624432133177
+}
